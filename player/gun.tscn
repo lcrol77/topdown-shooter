@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://by75r61m83f7"]
+
+[ext_resource type="Texture2D" uid="uid://d0ucgvw771ds2" path="res://assets/Hero/Hero/gun sprite BLUE.png" id="1_3faea"]
+
+[node name="Gun" type="Sprite2D"]
+position = Vector2(0, 1)
+texture = ExtResource("1_3faea")
+
+[node name="BulletSpawn" type="Node2D" parent="."]
+position = Vector2(6, -1)
