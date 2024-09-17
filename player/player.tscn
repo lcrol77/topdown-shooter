@@ -1,9 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://cipy622v0qxol"]
+[gd_scene load_steps=45 format=3 uid="uid://cipy622v0qxol"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_1kr6p"]
-[ext_resource type="PackedScene" uid="uid://by75r61m83f7" path="res://player/gun.tscn" id="2_01w13"]
+[ext_resource type="PackedScene" uid="uid://by75r61m83f7" path="res://guns/test/gun.tscn" id="2_01w13"]
 [ext_resource type="Texture2D" uid="uid://c5r5es578m7el" path="res://assets/Hero/Hero/Hero spritesheet BLUE with shadow.png" id="2_e6mkk"]
 [ext_resource type="Script" path="res://player/camera.gd" id="4_worbc"]
+[ext_resource type="Texture2D" uid="uid://bwmfmau4o7bg5" path="res://assets/Hero/Hero/gun sprite GREEN.png" id="5_hvec3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4j0po"]
 atlas = ExtResource("2_e6mkk")
@@ -311,10 +312,16 @@ flip_h = true
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_ukyve")
 
-[node name="Gun" parent="." instance=ExtResource("2_01w13")]
-position = Vector2(0, 2)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("4_worbc")
 
-[editable path="Gun"]
+[node name="GunAttachmentPoint" type="Node2D" parent="."]
+position = Vector2(0, 2)
+
+[node name="Loadout" type="Node2D" parent="."]
+
+[node name="Gun" parent="Loadout" instance=ExtResource("2_01w13")]
+is_active = true
+
+[node name="Gun2" parent="Loadout" instance=ExtResource("2_01w13")]
+texture = ExtResource("5_hvec3")
