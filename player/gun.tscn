@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://d0ucgvw771ds2" path="res://assets/Hero/Hero/gun sprite BLUE.png" id="1_3faea"]
 
 [node name="Gun" type="Sprite2D"]
-position = Vector2(0, 1)
+position = Vector2(-9, 1)
 texture = ExtResource("1_3faea")
+offset = Vector2(9, 0)
 
 [node name="BulletSpawn" type="Node2D" parent="."]
-position = Vector2(6, -1)
+position = Vector2(15, -1)

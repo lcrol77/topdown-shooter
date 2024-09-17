@@ -295,21 +295,22 @@ animations = [{
 radius = 4.0
 height = 10.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_1kr6p")
 speed = 75
-
-[node name="Gun" parent="." instance=ExtResource("2_01w13")]
-position = Vector2(8, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_eb3ia")
 animation = &"idle"
+autoplay = "idle"
 frame_progress = 0.37434
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_ukyve")
+
+[node name="Gun" parent="." instance=ExtResource("2_01w13")]
+position = Vector2(0, 2)
 
 [editable path="Gun"]
