@@ -6,6 +6,9 @@ extends CharacterBody2D
 @onready var gun_attachment_point: Node2D = $GunAttachmentPoint
 @onready var loadout: Node = $Loadout
 
+# FIXME: problem with this implementation is what to do when the player addes or drops a weapon
+# i.e. when changing the size of the loadout in anyway we need to rectify this index, or we need
+# a different approach
 var active_weapon_idx: int = 0
 
 func _ready() -> void:
