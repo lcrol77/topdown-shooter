@@ -11,3 +11,6 @@ script = ExtResource("2_e3dwe")
 
 [node name="BulletSpawn" type="Node2D" parent="."]
 position = Vector2(15, -1)
+
+[node name="Target" type="Node2D" parent="."]
+position = Vector2(17, -1)
