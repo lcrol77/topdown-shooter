@@ -57,6 +57,10 @@ func display_gun(gun: Gun)->void:
 	# the bullet is being spawned in thin air
 	if get_global_mouse_position().x < global_position.x:
 		gun.flip_v = true
+		gun.bullet_spawn.position.y = 1
+		gun.target.position.y = 1
 	else:
 		gun.flip_v = false
+		gun.bullet_spawn.position.y = -1
+		gun.target.position.y = -1
 	gun.visible = true
