@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://by75r61m83f7"]
+[gd_scene load_steps=4 format=3 uid="uid://by75r61m83f7"]
 
 [ext_resource type="Texture2D" uid="uid://d0ucgvw771ds2" path="res://assets/Hero/Hero/gun sprite BLUE.png" id="1_3faea"]
 [ext_resource type="Script" path="res://guns/test/gun.gd" id="2_e3dwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nasoq"]
+size = Vector2(5, 5)
 
 [node name="Gun" type="Sprite2D"]
 position = Vector2(-9, 1)
@@ -11,3 +14,6 @@ script = ExtResource("2_e3dwe")
 
 [node name="BulletSpawn" type="Node2D" parent="."]
 position = Vector2(15, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletSpawn"]
+shape = SubResource("RectangleShape2D_nasoq")
