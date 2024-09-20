@@ -52,9 +52,6 @@ func display_gun(gun: Gun)->void:
 	if gun == null:
 		return
 	gun.look_at(get_global_mouse_position())
-	# FIXME: flipping the v axis of the gun only flips the sprite. 
-	# causes a bug where the spawn point is off and it looks like 
-	# the bullet is being spawned in thin air
 	if get_global_mouse_position().x < global_position.x:
 		gun.flip_v = true
 		gun.bullet_spawn.position.y = 1
