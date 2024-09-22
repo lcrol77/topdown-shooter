@@ -17,3 +17,4 @@ func _input(event: InputEvent) -> void:
 			# FIXME: there has to be a better way to do this
 			instance.target = target.global_position
 			get_parent().add_child(instance)
+			Globals.camera.shake(0.15, 20, 3)

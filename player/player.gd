@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var gun: PackedScene = preload("res://guns/test/gun.tscn")
 @onready var gun_attachment_point: Node2D = $GunAttachmentPoint
 @onready var loadout: Node = $Loadout
+@onready var camera = $Camera2D
 
 # FIXME: problem with this implementation is what to do when the player addes or drops a weapon
 # i.e. when changing the size of the loadout in anyway we need to rectify this index, or we need
@@ -15,6 +16,7 @@ func _ready() -> void:
 	for weapon in loadout.get_children():
 		weapon.global_position = gun_attachment_point.global_position
 		weapon.visible = false
+	Globals.camera = camera
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left", "right", "up", "down")
