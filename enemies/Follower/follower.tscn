@@ -203,4 +203,4 @@ animations = [{
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h7gtb")
 animation = &"die"
-frame_progress = 0.223381
+frame_progress = 0.0995645
